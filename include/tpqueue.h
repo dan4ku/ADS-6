@@ -15,12 +15,12 @@ class TPQueue {
   item* head;
   item* tail;
   public:
-  TPQueue() : head(nullptr), tail(nullptr) {}
-  ~TPQueue() {
-    while (head) {
-      item* temp = head;
-      head = head->next;
-      delete temp;
+   TPQueue() : head(nullptr), tail(nullptr) {}
+   ~TPQueue() {
+     while (head) {
+       item* temp = head;
+       head = head->next;
+       delete temp;
     }
   }
   T pop() {
