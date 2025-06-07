@@ -9,19 +9,20 @@ class TPQueue {
  private:
   struct item {
   T data;
-  item* next;
+  item *next;
   explicit item(T data) : data(data), next(nullptr) {}
   };
   item* head;
   item* tail;
+
  public:
   TPQueue() : head(nullptr), tail(nullptr) {}
   ~TPQueue() {
-   while (head) {
-    item* temp = head;
-    head = head->next;
-    delete temp;
-   }
+    while (head) {
+      item* temp = head;
+      head = head->next;
+      delete temp;
+    }
   }
   T pop() {
     if (!head)
