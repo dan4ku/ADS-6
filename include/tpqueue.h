@@ -14,7 +14,7 @@ class TPQueue {
   };
   item* head;
   item* tail;
- public:
+  public:
   TPQueue() : head(nullptr), tail(nullptr) {}
   ~TPQueue() {
     while (head) {
